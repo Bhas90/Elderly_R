@@ -12,6 +12,7 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true // If using cookies or authentication headers
+  optionsSuccessStatus: 200
 }));
 
 // Handle Preflight Requests
