@@ -7,7 +7,16 @@ const requestIp = require('request-ip');
 const app = express();
 const port = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: "https://rugby.britishelderlycare.com", // Allow frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true // If using cookies or authentication headers
+}));
+
+// Handle Preflight Requests
+app.options("*", cors());
+
 app.use(bodyParser.json());
 app.use(requestIp.mw());
 
@@ -26,7 +35,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // 📌 Endpoint: Send Contact Form Data to Admin & Client
-app.post('/send-email', (req, res) => {
+app.post('/home/send-email', (req, res) => {
   const {
     name, email, mobile, age, postCode, existingCare, service,
     healthConditions, careTiming, hoursPerDay, daysPerWeek, emergencyContact, fundingSource, livingArrangements, pageUrl
