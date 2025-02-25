@@ -46,7 +46,7 @@ const WhyChooseAndContactForm = () => {
             visitTime: new Date().toISOString(),
           };
   
-          await fetch("https://server.britishelderlycare.com/home/notify-admin", {
+          await fetch("https://server.britishelderlycare.com//home/notify-admin", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(visitData),
