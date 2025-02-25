@@ -46,7 +46,7 @@ const WhyChooseAndContactForm = () => {
             visitTime: new Date().toISOString(),
           };
   
-          await fetch("http://localhost:5000/notify-admin", {
+          await fetch("https://server.britishelderlycare.com/home/notify-admin", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(visitData),
@@ -81,7 +81,7 @@ const WhyChooseAndContactForm = () => {
   
     setIsSubmitting(true);
   
-    fetch('http://localhost:5000/send-email', {
+    fetch('https://server.britishelderlycare.com/home/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
