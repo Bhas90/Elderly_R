@@ -9,7 +9,7 @@ const port = 5000;
 
 app.use(cors({
   origin: "https://rugby.britishelderlycare.com/", // Allow frontend domain
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true // If using cookies or authentication headers
   optionsSuccessStatus: 200
