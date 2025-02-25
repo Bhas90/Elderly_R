@@ -30,7 +30,7 @@ const ContactDetails = () => {
               We're available 24/7. Feel free to reach out to us!
             </p>
             <a 
-              href="tel:+01788340799"
+              href="tel:01788340799"
               className="text-customBlue hover:underline flex items-center"
             >
               <FaPhoneAlt className="mr-2" /> Call Now
