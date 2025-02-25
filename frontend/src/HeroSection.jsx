@@ -13,7 +13,7 @@ const HeroSection = () => {
           <h1 className="text-4xl font-semibold mb-4 mt-20">Caring for Your Loved Ones with Compassion</h1>
           <p className="text-lg mb-6">We provide expert elderly care services to ensure your peace of mind.</p>
           <button className="bg-customBlue text-white py-2 px-6 rounded-lg hover:bg-customDark transition-all duration-300">
-            <a href="tel:+01788340799" className="text-lg">CALL TODAY!</a>
+            <a href="tel:01788340799" className="text-lg">CALL TODAY!</a>
           </button>
         </div>
       </div>
