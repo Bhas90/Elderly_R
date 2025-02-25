@@ -13,8 +13,8 @@ const Navbar = () => {
       </div>
       
       {/* Phone number with mobile icon */}
-      <a href="tel:+01902921475" className="text-lg flex items-center hover:text-gray-200">
-        <FaPhoneAlt className="mr-2" /> +01902921475
+      <a href="tel:+01788340799" className="text-lg flex items-center hover:text-gray-200">
+        <FaPhoneAlt className="mr-2" /> +01788340799
       </a>
     </header>
   );

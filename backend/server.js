@@ -20,8 +20,8 @@ app.get("/home" ,async(req,res) => {
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'info@britishelderlycare.com', // Admin Email
-    pass: 'ojyj rdit vbpf bkpi', // Use an actual App Password
+    user: 'dilip@britishelderlycare.com', // Admin Email
+    pass: 'yysp xerc sekh iokd', // Use an actual App Password
   },
 });
 
@@ -37,7 +37,7 @@ app.post('/send-email', (req, res) => {
   // 📩 Admin Email (Lead Notification)
   const adminMailOptions = {
     from: `"${name}" <${email}>`,
-    to: 'info@britishelderlycare.com',
+    to: 'dilip@britishelderlycare.com',
     replyTo: email,
     subject: 'New Lead Appointment Request',
     html: `
@@ -82,7 +82,7 @@ app.post('/send-email', (req, res) => {
 
     // 📩 Auto-Reply to the Client
     const clientMailOptions = {
-      from: `"British Elderly Care" <info@britishelderlycare.com>`,
+      from: `"British Elderly Care" <dilip@britishelderlycare.com>`,
       to: email,
       subject: 'Thank You for Your Inquiry - British Elderly Care',
       html: `
@@ -101,8 +101,8 @@ app.post('/send-email', (req, res) => {
               <li><strong>Age:</strong> ${age}</li>
               <li><strong>Service Requested:</strong> ${service}</li>
             </ul>
-            <p>For urgent assistance, call us at <strong><a href="tel:+01902921475" className="text-lg flex items-center hover:text-gray-200">
-                    <FaPhoneAlt className="mr-2" /> +01902921475
+            <p>For urgent assistance, call us at <strong><a href="tel:+01788340799" className="text-lg flex items-center hover:text-gray-200">
+                    <FaPhoneAlt className="mr-2" /> +01788340799
                   </a></strong>.</p>
             <p>Best regards,</p>
             <p><strong>British ElderCare Team</strong></p>
@@ -127,12 +127,12 @@ app.post('/send-email', (req, res) => {
 });
 
 // 📌 Endpoint: Notify Admin When a Visitor Arrives
-app.post('/notify-admin', (req, res) => {
+app.post('/home/notify-admin', (req, res) => {
   const { ip, city, region, country, browser, referrer, visitTime } = req.body;
 
   const mailOptions = {
-    from: `"British Elderly Care" <info@britishelderlycare.com>`,
-    to: 'info@britishelderlycare.com',
+    from: `"British Elderly Care" <dilip@britishelderlycare.com>`,
+    to: 'dilip@britishelderlycare.com',
     subject: 'New Visitor Alert - British Elderly Care',
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.6;">
