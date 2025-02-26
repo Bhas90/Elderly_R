@@ -7,13 +7,14 @@ const requestIp = require('request-ip');
 const app = express();
 const port = 5000;
 
-app.use(cors({
-  origin: "*", // Allow frontend domain
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true // If using cookies or authentication headers
-  optionsSuccessStatus: 200
-}));
+app.use(
+  cors({
+    origin: "*", // Change to your frontend domain in production
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    optionsSuccessStatus: 200, // Properly placed
+  })
+);
 
 // Handle Preflight Requests
 app.options("*", cors());
